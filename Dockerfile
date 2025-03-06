@@ -14,12 +14,12 @@ COPY . .
 # Set environment variables
 ENV FLASK_APP=app
 ENV PYTHONUNBUFFERED=1
+ENV FLASK_ENV=production
 ENV FLASK_DEBUG=0
 ENV FLASK_PORT=5001
-# API keys will be provided via the .env file
-ENV GEMINI_API_KEY=""
+# API keys and MongoDB URI will be provided via the .env.production file
 
-# Expose port 5002 (the port used in our application)
+# Expose port 5001 (the port used in our application)
 EXPOSE 5001
 
 # Run the application

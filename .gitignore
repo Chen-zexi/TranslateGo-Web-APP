@@ -1,6 +1,12 @@
 # mac junk
 .DS_Store
 
+#ssh
+*key
+setup.sh
+
+.env.production
+
 # visual studio code junk
 .vscode/
 .vscode/settings.json
