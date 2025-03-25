@@ -4,14 +4,6 @@
 
 An AI powered translation application that helps users quickly look up words, accurately translate text between multiple languages, save translations for future reference, and customize their experience based on specialized topics of interest.
 
-## User stories
-[Link to User stories](https://github.com/software-students-spring2025/2-web-app-many-people/issues?q=is%3Aissue%20state%3Aclosed)
-- As an ELL student, I want to translate unfamiliar English words I encounter in my textbooks so that I can understand my assignments without constantly interrupting my reading flow.
-- As an ELL student, I want to see side-by-side translations of English texts with my native language so that I can compare sentence structures and improve my understanding of English grammar.
-- As an ELL student, I want to see multiple possible translations for English words I look up so that I can select the one that best fits my context.
-- As a content creator, I want to translate longer texts while maintaining the original tone and style so that my work resonates with audiences in different languages.
-- As a traveler, I want to quickly look up foreign words I encounter on signs or menus so that I can understand my surroundings in a new country without carrying a physical dictionary.
-- As a researcher, I want to customize the translation engine to recognize specialized scientific terminology so that I receive accurate translations in my field of expertise.
 
 ## Steps necessary to run the software
 

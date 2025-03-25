@@ -1,5 +1,6 @@
 import os
 import json
+import re
 from openai import OpenAI
 
 # Language codes and names
@@ -13,11 +14,10 @@ LANGUAGES = {
 # Chinese translation instructions
 CHINESE_INSTRUCTIONS = """
 IMPORTANT INSTRUCTION FOR CHINESE TRANSLATIONS:
-1. DO NOT include pinyin or phonetic pronunciations ANYWHERE in the response.
-2. Leave the phonetic field empty.
-3. Do not include romanization in brackets like (wèi lái) after Chinese characters.
-4. All examples should use only Chinese characters without pinyin.
-5. Do not add pronunciation guides in any field.
+1. Provide your response in Simplified Chinese only.
+2. For translations, DO NOT include pinyin or phonetic pronunciations ANYWHERE in the response, you will be fired if you do.
+3. Leave the phonetic field empty.
+4. Do not add pronunciation guides in any field.
 """
 
 
@@ -395,6 +395,7 @@ class OpenAITranslator:
         try:
             # Parse the JSON response
             parsed_response = json.loads(result_text)
+            print(parsed_response)
             
             # Return formatted result with all needed data
             return {
@@ -425,8 +426,10 @@ class OpenAITranslator:
             
         try:
             # Prepare API call parameters
+            print(system_prompt)
             params = {
                 "model": self.model,
+                "temperature": 1,
                 "messages": [
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": user_message}
